@@ -1,0 +1,73 @@
+:root {
+  --background: #f5f6f2;
+  --foreground: #2b1d16;
+  --card: #ffffff;
+  --card-foreground: #2b1d16;
+  --primary: #1e4b8f;
+  --primary-foreground: #ffffff;
+  --secondary: #e6ebf3;
+  --secondary-foreground: #1b3a68;
+  --muted: #eceee8;
+  --muted-foreground: #6a5d54;
+  --accent: #e6ebf3;
+  --accent-foreground: #1b3a68;
+  --border: #d8dbd2;
+  --input: #cfd3c9;
+  --ring: #1e4b8f;
+  --radius: 0.75rem;
+
+  --crema: #c8822b;
+  --roast: #2a1b14;
+
+  --font-body: "Figtree Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Young Serif", Georgia, serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+[data-slot="card-title"] {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.pattern-delft {
+  background-color: var(--secondary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%231e4b8f' stroke-width='1.4' opacity='0.16'%3E%3Ccircle cx='32' cy='23' r='6'/%3E%3Ccircle cx='41' cy='32' r='6'/%3E%3Ccircle cx='32' cy='41' r='6'/%3E%3Ccircle cx='23' cy='32' r='6'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%231e4b8f'/%3E%3Cpath d='M0 9A9 9 0 0 0 9 0M55 0A9 9 0 0 0 64 9M64 55A9 9 0 0 0 55 64M9 64A9 9 0 0 0 0 55'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 64px 64px;
+}
+
+.pattern-delft-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.4' opacity='0.09'%3E%3Ccircle cx='32' cy='23' r='6'/%3E%3Ccircle cx='41' cy='32' r='6'/%3E%3Ccircle cx='32' cy='41' r='6'/%3E%3Ccircle cx='23' cy='32' r='6'/%3E%3Ccircle cx='32' cy='32' r='2.5' fill='%23ffffff'/%3E%3Cpath d='M0 9A9 9 0 0 0 9 0M55 0A9 9 0 0 0 64 9M64 55A9 9 0 0 0 55 64M9 64A9 9 0 0 0 0 55'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 64px 64px;
+}
+
+.scallop-down {
+  height: 14px;
+  background: radial-gradient(circle at 14px 0, var(--scallop, var(--secondary)) 13.5px, transparent 14.5px) repeat-x;
+  background-size: 28px 14px;
+}
+
+.scallop-up {
+  height: 14px;
+  background: radial-gradient(circle at 14px 14px, var(--scallop, var(--secondary)) 13.5px, transparent 14.5px) repeat-x;
+  background-size: 28px 14px;
+}
+
+.scallop-primary {
+  --scallop: var(--primary);
+}
+
+.scallop-crema {
+  --scallop: var(--crema);
+}
