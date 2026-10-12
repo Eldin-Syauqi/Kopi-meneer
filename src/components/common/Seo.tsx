@@ -5,7 +5,13 @@ export default function Seo({ title, description }: { title: string; description
   useEffect(() => {
     document.title = `${title} | ${siteConfig.name}`;
     if (description) {
-      document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+      let tag = document.querySelector('meta[name="description"]');
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", "description");
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", description);
     }
   }, [title, description]);
 

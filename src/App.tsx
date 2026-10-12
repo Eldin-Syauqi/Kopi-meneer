@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "@/components/layout/MainLayout";
 import ProtectedRoute from "@/routes/ProtectedRoute";
 
-const Home = lazy(() => import("@/pages/Home"));
+import Home from "@/pages/Home";
 const About = lazy(() => import("@/pages/About"));
 const Services = lazy(() => import("@/pages/Services"));
 const Teams = lazy(() => import("@/pages/Teams"));
